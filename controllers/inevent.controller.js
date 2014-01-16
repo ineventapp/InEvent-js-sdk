@@ -19,10 +19,10 @@ function InEvent(config)
 
 	var InEventInstance = this;
 
-	this.api = new Api();
+	this.api = new Api(InEventInstance);
 	this.exception = this.api.exception;
-	this.event = new EventController(InEventInstance);
-	this.person = new PersonController(InEventInstance);
+	this.eventController = new EventController(InEventInstance);
+	this.personController = new PersonController(InEventInstance);
 
 }
 

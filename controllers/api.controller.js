@@ -1,5 +1,12 @@
-function Api()
+function Api(parentInstance)
 {
+	if(parentInstance === undefined
+	|| !(parentInstance instanceof InEvent))
+	{
+		throw "Operation not permited!";
+	}
+
+	this.parent = parentInstance;
 	this.url = "http://inevent.us/developer/api/";
 	this.exception = new ExceptionController();
 }

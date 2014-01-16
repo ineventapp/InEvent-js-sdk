@@ -2,9 +2,9 @@ inevent = new InEvent({
 	cookies : true
 });
 
-var eventoTeste;
+var sampleEvent;
 
-inevent.event.getSingle(1, null, function(data)
+inevent.eventController.getSingle(1, null, function(data)
 {
-	eventoTeste = data;
+	sampleEvent = data;
 });
