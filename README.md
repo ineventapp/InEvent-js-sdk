@@ -1,14 +1,12 @@
 InEvent
 ========
 
-Português (em desenvolvimento)
-========
 
-Esse é o SDK oficial do InEvent para JS. Toda sua documentação pode ser acessada em [http://inevent.us/developer/](http://inevent.us/developer/).
+This is InEvent's official JS SDK. All its documentation can be accessed at [http://inevent.us/developer/](http://inevent.us/developer/).
 
-A SDK não necessita de nenhuma dependência.
+This SDK doesn't need any dependencies.
 
-Funcionamento
+How-to
 --------
 Como a SDK está sendo desenvolvida, não foi liberada uma versão `.min`.
 
@@ -45,7 +43,7 @@ eventController.getSingle(eventID, tokenID, function(data, exception)
 });
 ```
 
-Controladores
+Controllers
 --------
 Controladores criados até o momento:
 + InEvent
@@ -60,7 +58,7 @@ Modelos criados até o momento:
 + Event (acessado bloqueado - gerado em EventController).
 + Activity (acessado bloqueado - gerado em EventController/acessado em Event).
 
-Exceções
+Exceptions
 --------
 No `ExceptionController` é possível verificar *todas* as exceções lançadas e a *última* exceção lançada.
 
@@ -69,22 +67,7 @@ Para cada exceção em `ExceptionController`, é possível ver:
 - Um texto simples informando qual foi o problema (caso não haja acesso à API);
 - O local que foi lançada a exceção (ex: "Person.signIn");
 
-Exemplo
---------
-Acesse o arquivo `example.js` para um exemplo prático de como usar o SDK. Também está incluso um arquivo `example.html` para ser executado direto do browser.
-
-Sobre
---------
-InEvent é uma criação do Estúdio Trilha.
-
-English (under development)
-========
-
-This is InEvent's official JS SDK. All its documentation can be accessed at [http://inevent.us/developer/](http://inevent.us/developer/).
-
-This SDK doesn't need any dependencies.
-
-How-to
+Example
 --------
 Access the file `example.js` for a SDK How-to. We also included a `index.html` to be executed from browser.
 
@@ -94,4 +77,4 @@ Just open an issue on Github and I'll get to it as soon as possible.
 
 About
 --------
-InEvent is brought to you by Estúdio Trilha.
+This SDK is brought to you by InEvent.
