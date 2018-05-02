@@ -4,15 +4,15 @@ InEvent
 
 This is InEvent's official JS SDK. All its documentation can be accessed at [http://inevent.us/developer/](http://inevent.us/developer/).
 
-This SDK doesn't need any dependencies.
+This SDK doesn't require any dependencies.
 
-How-to
+How-to \[IN DEVELOPMENT -- DO NOT USE IN PRODUCTION\]
 --------
-Como a SDK está sendo desenvolvida, não foi liberada uma versão `.min`.
+Since this SDK is still under development, we don't have a minified `.min` version of it yet.
 
-Inclua todos os arquivos das pastas `controllers` e `models`.
+Include all files under directories `controllers` and `models`.
 
-*OBS: Todos os __callbacks__ devem ser no formato: function(data, exception){}*
+*PS: All __callbacks__ must be presented as: function(data, exception){}*
 
 ```js
 var inevent = new InEvent({
@@ -20,15 +20,15 @@ var inevent = new InEvent({
 });
 ```
 
-Para acessar algum controlador, execute: `inevent.NOMEDOCONTROLADOR`.
+To access a controller: `inevent.NOMEDOCONTROLADOR`.
 
-Exemplo:
+Example:
 
 ```js
 var eventController = inevent.eventController;
 ```
 
-Para pegar um único evento:
+To get an unique event:
 
 ```js
 var eventID = 1;
@@ -39,33 +39,33 @@ eventController.getSingle(eventID, tokenID, function(data, exception)
 	if(exception)
 		console.log(exception);
 	else
-		console.log(data); // Objeto do tipo Event
+		console.log(data); // Object of type Event
 });
 ```
 
 Controllers
 --------
-Controladores criados até o momento:
+Controllers created at the moment:
 + InEvent
 + Api
 + ExceptionController
-+ EventController (acessado apenas em InEvent.eventController).
-+ PersonController (acessado apenas em InEvent.personController).
++ EventController (Accessible through InEvent.eventController).
++ PersonController (Accessible through InEvent.personController).
 
-Modelos criados até o momento:
-+ Exception (acesso bloqueado - gerado em ExceptionController).
-+ Person (acessado bloqueado - gerado em PersonController).
-+ Event (acessado bloqueado - gerado em EventController).
-+ Activity (acessado bloqueado - gerado em EventController/acessado em Event).
+Models created at the moment:
++ Exception (blocked access - dinamically generated in ExceptionController).
++ Person (blocked access - dinamically generated in PersonController).
++ Event (blocked access - dinamically generated in EventController).
++ Activity (blocked access - dinamically generated in EventController/Event).
 
 Exceptions
 --------
-No `ExceptionController` é possível verificar *todas* as exceções lançadas e a *última* exceção lançada.
+In `ExceptionController` it is possible to verify *all* thrown exceptions and the *last* one.
 
-Para cada exceção em `ExceptionController`, é possível ver:
-- O status retornado pela API e sua resposta (caso haja um acesso pela API);
-- Um texto simples informando qual foi o problema (caso não haja acesso à API);
-- O local que foi lançada a exceção (ex: "Person.signIn");
+For each exception under `ExceptionController`, it is possible to manage:
+- The status returned by our API;
+- A description text of the problem;
+- The location that the exception has been thrown (ie: "Person.signIn");
 
 Example
 --------
